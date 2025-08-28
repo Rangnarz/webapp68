@@ -1,22 +1,114 @@
-nav {
-    padding-right: 10px;
-    padding-right: 10px;
-    float: right;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: bisque;
+body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    padding:15px; 
+    margin-top: -20px;
 }
+
+header {
+        font-size: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(212, 212, 212, 0.889);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+header h6 {
+        margin: 0;
+        color: black;
+    }
+
+nav {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+nav a {
+        text-decoration: none;
+        color: black;
+        margin-left: 30px;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 5px;
+        font-size: 16px;
+}
+
+nav a:hover {
+            color: rgba(199, 3, 205, 0.745);
+        }
+
+nav a.active {
+            color: rgba(199, 3, 205, 0.745);
+            border-bottom: 2px solid rgba(199, 3, 205, 0.745);
+        }
+
+section {
+    font-size: 35px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 390px;
+    line-height: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.intro-text {
+            flex: 1;
+        }
 
 img {
-    width: 80px;
-    height: 100px;
-    border: 2px;
-    border-style: solid;
-    border-color: brown;
-    border-radius: 100px;
+    width: 450px;
+    height: 400px;
+    align-items: center;
+    border-radius: 100%; 
+    object-fit: cover; 
+    object-position: bottom;
 }
 aside {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     float: right;
-    background-color: lightgray;
-
 }
+
+
+.btn-connect {
+  display: inline-block;      
+  background-color: rgba(199, 3, 205, 0.745);     
+  color: white;              
+  padding: 13px 40px;
+  border: none;         
+  border-radius: 5px;        
+  text-decoration: none;    
+  font-size: 18px;           
+  font-weight: bold;         
+  transition: 0.3s;   
+  outline: none;
+  margin-top: 40px;         
+}
+
+.btn-connect:hover {
+  background-color: rgb(197, 0, 174); 
+}
+
+
+footer {
+            padding: 20px 40px;
+            background-color: #f8f8f8;
+            border-top: 1px solid rgba(212, 212, 212, 0.889);
+            margin-top: -200px;
+        }
+
+footer a {
+            text-decoration: none;
+            color: black;
+            margin-right: 20px;
+            font-weight: 500;
+        }
+
+footer a:hover {
+            color: rgba(199, 3, 205, 0.745);
+        }
