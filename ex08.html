@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex08</title>
+  <style>
+  body {
+    margin: 30px;
+    padding: 10px;
+    border: 2px solid rgb(177, 177, 177);
+    height: 200px;
+  }
+
+  .menu-container {
+    position: relative;
+  }
+
+  .menu-button {
+    width: 100px;
+    height: 100px;
+    background: mediumorchid;
+    cursor: pointer;
+  }
+
+  .menu {
+    position: absolute;
+    top: 104px;
+    background: white;
+    border: 1px solid #cccccce6;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    min-width: 120px;
+    cursor: pointer;
+  }
+
+  a {
+    padding: 10px 14px;
+    color: #414141;
+    transition: 0.2s;
+  }
+  a:hover {
+    background: white;
+  }
+
+  .menu-container:hover .menu,
+  .menu-container:focus .menu {
+    display: flex;
+  }
+  </style>
+</head>
+<body>
+  <div class="menu-container" tabindex="0">
+    <div class="menu-button"></div>
+      <div class="menu">
+        <a>Home</a>
+        <a>Profile</a>
+        <a>Settings</a>
+        <a>Logout</a>
+      </div>
+  </div>
+  <script>
+    const container = document.querySelector('.menu-container');
+    const menu = container.querySelector('.menu');
+    let hideTimeout;
+
+    container.addEventListener('mouseenter', () => {
+      clearTimeout(hideTimeout);   // ถ้ามีการนับถอยหลังซ่อนอยู่ ให้ยกเลิก
+      menu.style.display = 'flex'; // แสดงเมนูทันที
+    });
+
+    container.addEventListener('mouseleave', () => {
+      hideTimeout = setTimeout(() => {
+        menu.style.display = 'none'; // ซ่อนหลังจาก 1 วิ
+      }, 300);
+    });
+  </script>
+</body>
+</html>
